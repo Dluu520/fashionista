@@ -71,13 +71,13 @@ const Navbar = () => {
         >
           <ul>
             <li className="p-4 text-4xl hover:text-gray-500">
-              <Link href="/men">MEN</Link>
+              <Link href="/men">SHOP</Link>
             </li>
             <li className="p-4 text-4xl hover:text-gray-500">
-              <Link href="/women">WOMEN</Link>
+              <Link href="/women">Wishlist</Link>
             </li>
             <li className="p-4 text-4xl hover:text-gray-500">
-              <Link href="/teens">TEENS</Link>
+              <Link href="/teens">Cart</Link>
             </li>
             <li className="p-4 text-4xl hover:text-gray-500">
               <Link href="/search">Search</Link>

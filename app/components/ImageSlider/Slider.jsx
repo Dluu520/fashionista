@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
+import { SliderData } from "./SliderData";
 
 const Slider = ({ slides }) => {
   const [current, setCurrent] = React.useState(0);
@@ -17,10 +18,10 @@ const Slider = ({ slides }) => {
   }
 
   return (
-    <div id="Category" className="max-w-[1240px] mx-auto">
+    <div id="Category" className="max-w-[1240px] mx-auto my-auto">
       <h1 className="text-2xl font-bold text-center p-4">Search by Category</h1>
-      <div className="relative flex justify-center p-4 scale-x-[-1]">
-        {slides.map((slide, index) => {
+      <div className="relative flex justify-center p-4 mt-10">
+        {SliderData.map((slide, index) => {
           return (
             <div
               key={index}
@@ -38,12 +39,19 @@ const Slider = ({ slides }) => {
                 size={50}
               />
               {index === current && (
-                <Image
-                  width="500"
-                  height="200"
-                  objectFit="cover"
-                  src={slide.image}
-                />
+                <div class="relative flex justify-center">
+                  <Image
+                    width="500"
+                    height="200"
+                    objectFit="cover"
+                    src={slide.image}
+                  />
+                  <div className="absolute top-0 left-0 bottom-0 z-[2] hover:bg-black/30 w-full flex justify-center items-center group ease-in-out duration-300">
+                    <button className="group-hover:block text-2xl text-white font-bold border-4 p-4 w-[40%] ">
+                      {slide.header}
+                    </button>
+                  </div>
+                </div>
               )}
               <FaArrowCircleRight
                 onClick={nextSlide}
