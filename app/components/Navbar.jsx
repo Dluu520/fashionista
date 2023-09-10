@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { FiShoppingCart } from "react-icons/fi";
 const Navbar = () => {
   const [nav, setNav] = React.useState(false);
   const [color, setColor] = React.useState("transparent");
@@ -22,6 +23,7 @@ const Navbar = () => {
     };
     window.addEventListener("scroll", changeColor);
   }, []);
+
   return (
     <div
       style={{ backgroundColor: `${color}` }}
@@ -35,16 +37,16 @@ const Navbar = () => {
         </Link>
         <ul style={{ color: `${textColor}` }} className="hidden sm:flex ">
           <li className="p-4 ">
-            <Link href="/men">Shop</Link>
+            <Link href="/">Shop</Link>
           </li>
           <li className="p-4 ">
-            <Link href="/women">Wishlist</Link>
+            <Link href="/">Wishlist</Link>
           </li>
           <li className="p-4 ">
-            <Link href="/teens">Cart</Link>
+            <Link href="/">Cart</Link>
           </li>
           <li className="p-4 ">
-            <Link href="/search">Search</Link>
+            <Link href="/">Search</Link>
           </li>
         </ul>
         {/* Mobile Buttons */}
@@ -71,16 +73,16 @@ const Navbar = () => {
         >
           <ul>
             <li className="p-4 text-4xl hover:text-gray-500">
-              <Link href="/men">SHOP</Link>
+              <Link href="/">SHOP</Link>
             </li>
             <li className="p-4 text-4xl hover:text-gray-500">
-              <Link href="/women">Wishlist</Link>
+              <Link href="/">Wishlist</Link>
             </li>
             <li className="p-4 text-4xl hover:text-gray-500">
-              <Link href="/teens">Cart</Link>
+              <Link href="/">Cart</Link>
             </li>
             <li className="p-4 text-4xl hover:text-gray-500">
-              <Link href="/search">Search</Link>
+              <Link href="/">Search</Link>
             </li>
           </ul>
         </div>
