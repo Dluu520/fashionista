@@ -5,14 +5,14 @@ import React from "react";
 
 const NewProducts = () => {
   return (
-    <div className="flex flex-col w-full p-5 bg-beige  gap-4 ">
-      <div className="flex justify-between">
+    <div className="flex flex-col items-center w-full p-5 bg-beige  gap-5 ">
+      <div className="flex w-full justify-between">
         <h1 className="text-3xl font-bold font-serif">News</h1>
         <Link href="/" className="underline">
           View All
         </Link>
       </div>
-      <div className="flex flex-col sm:flex-row gap-5 ">
+      <div className="w-full flex flex-col sm:flex-row gap-10 justify-evenly items-center">
         <div className="relative flex flex-col gap-2">
           <Image
             width="400"
@@ -35,6 +35,19 @@ const NewProducts = () => {
             }
           />
           <h4 className="text-2xl font-bold">NEW: FALL COATS</h4>
+          <Link className="underline " href="/">
+            View More
+          </Link>
+        </div>
+        <div className="relative flex flex-col gap-2">
+          <Image
+            width={400}
+            height={300}
+            src={
+              "https://images.unsplash.com/photo-1611485988300-b7530defb8e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+            }
+          />
+          <h4 className="text-2xl font-bold">NEW: FORMAL WEAR</h4>
           <Link className="underline " href="/">
             View More
           </Link>

@@ -32,31 +32,31 @@ const Slider = ({ slides }) => {
                   : "opacity-0 "
               }
             >
-              <FaArrowCircleLeft
-                onClick={prevSlide}
-                className="absolute top-[50%] left-[50px] text-black/70 cursor-pointer select-none z-[2]"
-                size={50}
-              />
               {index === current && (
-                <div class="relative flex justify-center h-[30dvh] sm:h-[80dvh] ">
+                <div class="relative flex justify-center gap-5 h-[40dvh] sm:h-[80dvh] ">
+                  <FaArrowCircleLeft
+                    onClick={prevSlide}
+                    className="absolute top-[50%] left-[10px] text-black/70 cursor-pointer select-none z-[2]"
+                    size={50}
+                  />
                   <Image
                     width="500"
                     height="200"
                     objectFit="cover"
                     src={slide.image}
                   />
-                  <div className="absolute top-0 left-0 bottom-0 z-[2] hover:bg-black/30 w-full flex justify-center items-center group ease-in-out duration-300">
-                    <button className="group-hover:block text-2xl text-white font-bold border-4 p-4 w-[40%] ">
+                  <div className="absolute top-0 left-0 bottom-0  hover:bg-black/30 w-full flex justify-center items-center group ease-in-out duration-600">
+                    <button className="group-hover:block text-2xl text-white font-bold  border-4 p-4 w-[50%] ">
                       {slide.header}
                     </button>
                   </div>
+                  <FaArrowCircleRight
+                    onClick={nextSlide}
+                    className="absolute top-[50%] right-[10px] text-black/70 cursor-pointer select-none z-[2]"
+                    size={50}
+                  />
                 </div>
               )}
-              <FaArrowCircleRight
-                onClick={nextSlide}
-                className="absolute top-[50%] right-[50px] text-black/70 cursor-pointer select-none z-[2]"
-                size={50}
-              />
             </div>
           );
         })}

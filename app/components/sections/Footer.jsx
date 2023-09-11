@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -15,23 +16,23 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-wrap sm:flex-row gap-10 p-10">
-          <div className="">
+          <div className="flex flex-col justify-center items-center">
             <h2>QUICK LINKS</h2>
-            <p>About Us</p>
-            <p>Contact</p>
-            <p>Shipping</p>
+            <Link href="/">About Us</Link>
+            <Link href="/">Contact</Link>
+            <Link href="/">Shipping</Link>
           </div>
-          <div>
+          <div className="flex flex-col justify-center items-center">
             <h2>SHOP</h2>
-            <p>New Arrivals</p>
-            <p>Bestsellers</p>
-            <p>Collections</p>
+            <Link href="/">New Arrivals</Link>
+            <Link href="/">Bestsellers</Link>
+            <Link href="/">Collections</Link>
           </div>
-          <div>
+          <div className="flex flex-col justify-center items-center">
             <h2>FOLLOW US</h2>
-            <p>Facebook</p>
-            <p>Instagram</p>
-            <p>Pinterest</p>
+            <Link href="/">Facebook</Link>
+            <Link href="/">Instagram</Link>
+            <Link href="/">Pinterest</Link>
           </div>
         </div>
       </div>
